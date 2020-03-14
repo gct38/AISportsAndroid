@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">AISports</string>
+    <string name="welcome">Welcome to GymTracker, visitor!</string>
+    <string name="logo">LOGO</string>
+    <string name="create_login">Create an account or login to start tracking workouts.</string>
+    <string name="signup">Sign Up</string>
+    <string name="login">Log In</string>
+    <string name="user">Username</string>
+    <string name="password">Password</string>
+    <string name="forgotten_password">Forgot your password?</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_login1">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="message_placeholder">Write a message</string>
+</resources>
