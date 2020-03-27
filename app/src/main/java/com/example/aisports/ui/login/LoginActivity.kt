@@ -28,17 +28,17 @@ class LoginActivity : AppCompatActivity() {
 
         val username = findViewById<EditText>(R.id.usernameInput)
         val password = findViewById<EditText>(R.id.passwordInput)
-        val login = findViewById<Button>(R.id.login)
-        val loading = findViewById<ProgressBar>(R.id.loading)
+            val login = findViewById<Button>(R.id.login)
+            val loading = findViewById<ProgressBar>(R.id.loading)
 
-        loginViewModel = ViewModelProviders.of(this, LoginViewModelFactory())
-            .get(LoginViewModel::class.java)
+            loginViewModel = ViewModelProviders.of(this, LoginViewModelFactory())
+                .get(LoginViewModel::class.java)
 
-        loginViewModel.loginFormState.observe(this@LoginActivity, Observer {
-            val loginState = it ?: return@Observer
+            loginViewModel.loginFormState.observe(this@LoginActivity, Observer {
+                val loginState = it ?: return@Observer
 
-            // disable login button unless both username / password is valid
-            login.isEnabled = loginState.isDataValid
+                // disable login button unless both username / password is valid
+                login.isEnabled = loginState.isDataValid
 
             if (loginState.usernameError != null) {
                 username.error = getString(loginState.usernameError)
