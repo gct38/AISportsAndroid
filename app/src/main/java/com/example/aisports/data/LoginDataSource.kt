@@ -1,8 +1,6 @@
 package com.example.aisports.data
 
 import com.example.aisports.data.model.LoggedInUser
-import com.mongodb.ConnectionString
-import com.mongodb.client.MongoClients
 import java.io.IOException
 import java.util.*
 
@@ -15,10 +13,6 @@ class LoginDataSource {
     fun login(username: String, password: String): Result<LoggedInUser> {
         try {
             // TODO: handle loggedInUser authentication
-            val connString = ConnectionString(
-                "mongodb+srv://<username>:<password>@<cluster-address>/test?w=majority"
-            )
-            val mongoClient = MongoClients.create(connString)
 
 
             val fakeUser = LoggedInUser(UUID.randomUUID().toString(), "Jane Doe")

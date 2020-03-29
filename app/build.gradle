@@ -20,10 +20,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
 }
 
 dependencies {
@@ -39,7 +35,4 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
-    implementation 'org.mongodb:mongodb-driver-sync:4.0.1'
-    implementation 'org.mongodb:stitch-android-sdk:4.5.0'
-    implementation 'org.mongodb:mongodb-driver-legacy:4.0.1'
 }
