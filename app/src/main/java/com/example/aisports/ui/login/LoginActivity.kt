@@ -100,7 +100,7 @@ class LoginActivity : AppCompatActivity() {
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome)
         val displayName = model.displayName
-        // TODO : initiate successful logged in experience
+        // TODO : initiate successful logged in experience (bring them into their profile page?)
         Toast.makeText(
             applicationContext,
             "$welcome $displayName",

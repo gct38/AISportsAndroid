@@ -5,7 +5,7 @@
     <string name="create_login">Create an account or login to start tracking workouts.</string>
     <string name="signup">Sign Up</string>
     <string name="login">Log In</string>
-    <string name="user">Username</string>
+    <string name="user">Email Address</string>
     <string name="password">Password</string>
     <string name="forgotten_password">Forgot your password?</string>
     <string name="title_activity_login">Sign in</string>

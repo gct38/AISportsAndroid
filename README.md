@@ -17,8 +17,36 @@ Need to work on authentication. Need to somehow bridge Heroku security and Andro
 https://devcenter.heroku.com/articles/getting-started-with-gradle-on-heroku#declare-app-dependencies
 https://devcenter.heroku.com/articles/connecting-to-relational-databases-on-heroku-with-java
 
+QUERY HELP
+https://www.baeldung.com/kotlin-exposed-persistence
 
-Make cure connectionlayer class is Async task or it will not work
+COROUTINES
+Coroutines similar to async task. Use for any network activity so it's not handled on main UI thread.
+Make cure connectionlayer class uses coroutines or it will not work
+https://heartbeat.fritz.ai/replacing-asynctask-in-android-with-kotlin-coroutines-to-handle-background-tasks-93108f8f2db
+https://kotlinlang.org/docs/tutorials/coroutines/coroutines-basic-jvm.html
+https://stackoverflow.com/questions/46226518/what-is-the-difference-between-launch-join-and-async-await-in-kotlin-coroutines#46226519
+    Difference between Launch and Async coroutines
 
+To look at:
+https://medium.com/androiddevelopers/coroutines-on-android-part-iii-real-work-2ba8a2ec2f45
+https://stackoverflow.com/questions/48124519/heroku-permanent-database-credentials
+
+
+
+To do:
+- Handle password authentication. (encrypt/decrypt) so can match passwords and authenticate user
+    - Most likely going to have to authenticate with Heroku first.
+
+- Change UI to match wireframes
+
+- Try to integrate AI Computer Vision
+    https://www.fritz.ai/pose-estimation/
+    https://github.com/edvardHua/PoseEstimationForMobile
+
+- Chat functionality
+    - Use Websockets
+    - Will need to write server code of some sort
+    https://github.com/sbearben/chat-backend
 
 
