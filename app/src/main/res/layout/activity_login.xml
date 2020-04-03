@@ -21,7 +21,6 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="256dp"
         android:layout_marginEnd="24dp"
-
         android:drawableStart="@android:drawable/sym_action_email"
         android:drawableBottom="@android:drawable/divider_horizontal_dark"
         android:drawablePadding="5dp"

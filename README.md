@@ -28,17 +28,20 @@ https://kotlinlang.org/docs/tutorials/coroutines/coroutines-basic-jvm.html
 https://stackoverflow.com/questions/46226518/what-is-the-difference-between-launch-join-and-async-await-in-kotlin-coroutines#46226519
     Difference between Launch and Async coroutines
 
+
+
 To look at:
 https://medium.com/androiddevelopers/coroutines-on-android-part-iii-real-work-2ba8a2ec2f45
 https://stackoverflow.com/questions/48124519/heroku-permanent-database-credentials
-
+https://auth0.com/blog/authenticating-android-apps-developed-with-kotlin/  Login Form Development
+https://stackoverflow.com/questions/5944987/how-to-create-a-popup-window-popupwindow-in-android Popup message window
 
 
 To do:
 - Handle password authentication. (encrypt/decrypt) so can match passwords and authenticate user
     - Most likely going to have to authenticate with Heroku first.
 
-- Change UI to match wireframes
+- Change UI to match wireframes.
 
 - Try to integrate AI Computer Vision
     https://www.fritz.ai/pose-estimation/
