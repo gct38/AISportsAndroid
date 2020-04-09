@@ -10,6 +10,7 @@ import org.jetbrains.exposed.sql.transactions.transaction
 
 //TODO: remove all Log.d 's (was used for testing)
 class ConnectionLayer {
+    //simple connection string builder to connect to the database
     class ConnectionStringBuilder constructor(api: String = "jdbc", databaseType : String, host: String, port: String = "5432", database : String, user: String, password: String, properties: Map<String,String> = emptyMap()) {
         var connectionString: String = "$api:$databaseType://$host:$port/$database?user=$user&password=$password&"
         init {
@@ -21,6 +22,7 @@ class ConnectionLayer {
         }
     }
 
+    //function to map userQuery results to User data class object
     private fun ResultRow.toUser() = UserTable.User(
         id = this[UserTable.Users.id],
         password = this[UserTable.Users.password],
@@ -35,7 +37,7 @@ class ConnectionLayer {
         date_joined = this[UserTable.Users.date_joined]
     )
 
-
+    //suspended function (part of coroutine) used to perform a query for user given username/password
     suspend fun userQuery(username : String, password: String) : String {
         var searching = ""
         searching = getUser(username, password).username
@@ -43,7 +45,7 @@ class ConnectionLayer {
         return searching
     }
 
-
+    //private suspended function (part of coroutine) used to actually connnect to database and perform query
     private suspend fun getUser(username : String, password : String) : UserTable.User {
         val properties = mapOf("sslmode" to "require")      //need SSL authentication to access PostgreSQL database thru Heroku
         val connect = ConnectionStringBuilder(

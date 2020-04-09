@@ -1,5 +1,7 @@
 package com.example.aisports
 
+import ai.fritz.core.Fritz
+import ai.fritz.vision.poseestimation.Skeleton
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,6 +23,8 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity :: class.java)
             startActivity(intent)
         }
+
+        //Fritz.configure(this, "5a584f0dceb94048803c928e82c2432f")
     }
 
 

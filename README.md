@@ -45,6 +45,7 @@ To do:
 
 - Try to integrate AI Computer Vision
     https://www.fritz.ai/pose-estimation/
+    https://github.com/fritzlabs/fritz-examples/tree/master/Android/CameraBoilerplateApp (example for Fritz AI)
     https://github.com/edvardHua/PoseEstimationForMobile
 
 - Chat functionality

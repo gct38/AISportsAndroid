@@ -14,12 +14,16 @@ class LoginDataSource {
     fun login(username: String, password: String): Result<LoggedInUser> {
         try {
             // TODO: handle loggedInUser authentication
+            //calling upon coroutine to perform network operation (database query) on another thread instead of main UI thread
             val returnValue = runBlocking {
                 val returnValue = CoroutineScope(Dispatchers.Default).async {
                     ConnectionLayer().userQuery(username, password)
                 }
+                //Using async always needs await(). Allows for operation to finish and return its result
                 return@runBlocking returnValue.await()
             }
+            //Destroy coroutine after completion to ensure no memory leaks, etc.
+            CoroutineScope(Dispatchers.Default).cancel()
 
             Log.d("QUERY RESULT", returnValue)
             val fakeUser = LoggedInUser("dsfkljf", returnValue)
