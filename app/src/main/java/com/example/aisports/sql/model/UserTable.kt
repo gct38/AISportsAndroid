@@ -5,7 +5,8 @@ import org.jetbrains.exposed.sql.Table
 import org.joda.time.DateTime
 import org.jetbrains.exposed.sql.jodatime.datetime
 
-
+//TODO: delete class when API has been implemented and accessed for user management
+//          maybe can use this model for future use????
 class UserTable {
     object Users: Table("auth_user") {
         val id = integer("id")

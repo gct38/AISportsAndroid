@@ -2,7 +2,7 @@
     <string name="app_name">AISports</string>
     <string name="welcome">Welcome to GymTracker, visitor!</string>
     <string name="logo">Welcome to STATISTA</string>
-    <string name="create_login">Create an account or login to start tracking workouts.</string>
+    <string name="create_login">Create an account or login to start tracking your workouts.</string>
     <string name="signup">Sign Up</string>
     <string name="login">Log In</string>
     <string name="user">Email Address</string>

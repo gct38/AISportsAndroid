@@ -8,7 +8,7 @@ import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.transactions.transaction
 
 
-//TODO: remove all Log.d 's (was used for testing)
+//TODO: delete class when API has been implemented and accessed for user management
 class ConnectionLayer {
     //simple connection string builder to connect to the database
     class ConnectionStringBuilder constructor(api: String = "jdbc", databaseType : String, host: String, port: String = "5432", database : String, user: String, password: String, properties: Map<String,String> = emptyMap()) {
@@ -60,7 +60,6 @@ class ConnectionLayer {
         ).connectionString
 
         val user : UserTable.User = withContext(Dispatchers.Default) {
-            //TODO: Figure out how Heroku does password encryption so can encrypt/decrpyt password for authentication
             val db = Database.connect(connect)
             val name = "YOU SUCK " + db.name
             Log.d("DATABASE CONNECTION",name)
